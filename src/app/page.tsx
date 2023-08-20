@@ -4,15 +4,14 @@ import { HexColorPicker } from "react-colorful";
 
 export default function App() {
   const [color, setColor] = useState("#b32aa9");
-
   return (
     <div
-      className={`flex flex-col justify-center items-center h-screen w-full `} style={{background:color}}
+      className={`flex flex-col justify-center items-center h-screen w-full bg-[${color}]`}
     >
       <h1 className="font-bold text-4xl mb-4">Color Picker</h1>
       <div className="bg-white border border-white p-4 rounded-xl">
 
-      <HexColorPicker color={color} onChange={setColor} />
+      <HexColorPicker color={color} onChange={setColor} />  
       </div>
       {/* <div className="value" style={{ borderLeftColor: color }}>
         Current color is {color}
